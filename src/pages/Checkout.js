@@ -9,10 +9,10 @@ const Checkout = () => {
 
     return (
         <section className="checkout-wrapper">
-            <AmplifyAuthenticator>
+            <AmplifyAuthenticator style={{margin:"20px"}}>
                 <Elements stripe={stripePromise}>
-                    <section>
-                        <h2>Time to Checkout?</h2>
+                    <section className='checks'>
+                        <h2 style={{textAlign:"center"}}>Time to Checkout?</h2>
                         <CheckoutForm />
                     </section>
                 </Elements>

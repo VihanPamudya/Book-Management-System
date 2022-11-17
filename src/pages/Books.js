@@ -13,9 +13,9 @@ const Books = () => {
     <section className="books">
       {books.map(({ image, id, title}) => (
         <article key={id} className="book">
-          <div className="card" style={{ width: "20rem" }}>
+          <div className="card">
             <img className="card-img-top" src={image} alt={title} />
-            <div className="card-body">
+            <div className="card-body-book">
               <h5 className="card-title">{title}</h5>
               <Link to={`books/${id}`} className="btn btn-primary mt-2">
                 details

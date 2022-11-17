@@ -1,5 +1,4 @@
 /* eslint-disable */
-// this is an auto generated file. This will be overwritten
 
 export const processOrder = /* GraphQL */ `
   mutation ProcessOrder($input: ProcessOrderInput!) {
@@ -50,17 +49,6 @@ export const updateBook = /* GraphQL */ `
       featured
       quantity
       price
-      orders {
-        items {
-          id
-          book_id
-          order_id
-          createdAt
-          updatedAt
-          customer
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -73,26 +61,6 @@ export const deleteBook = /* GraphQL */ `
   ) {
     deleteBook(input: $input, condition: $condition) {
       id
-      title
-      description
-      image
-      author
-      featured
-      quantity
-      price
-      orders {
-        items {
-          id
-          book_id
-          order_id
-          createdAt
-          updatedAt
-          customer
-        }
-        nextToken
-      }
-      createdAt
-      updatedAt
     }
   }
 `;

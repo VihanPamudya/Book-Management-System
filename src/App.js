@@ -11,6 +11,8 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import BookDetails from "./pages/BookDetails";
 import Admin from './pages/Admin';
+import AddBook from './pages/AddBook';
+import UpdateBook from './pages/UpdateBook';
 
 // Components
 import Header from "./components/Header"
@@ -41,8 +43,15 @@ const App = () => {
           path="/books/:id"
           children={<BookDetails></BookDetails>}>
         </Route>
+        <Route
+          path="/admin/:id"
+          children={<UpdateBook></UpdateBook>}>
+        </Route>
         <Route path="/admin">
           <Admin />
+        </Route>
+        <Route path="/addbook">
+          <AddBook />
         </Route>
         <Route path="*">
           <Error />

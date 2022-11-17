@@ -22,26 +22,6 @@ const BookDetails = () => {
 
   return (
     <section className="book-details">
-      {/* <div className="detail-image">
-        <img src={url} alt="10x Rule" />
-      </div>
-      <div className="detail-description">
-        <h2>{title}</h2>
-        <p>{description}</p>
-        <h3>{author}</h3>
-        <h3>{quantity}</h3>
-        <h4>Price - $ {price}</h4>
-        <button
-          className="btn"
-          onClick={() => {
-            addToCart({ ...book, id });
-            history.push("/cart");
-          }}
-        >
-          Add to Cart
-        </button>
-      </div> */}
-
       <div className="container bootdey">
         <div className="col-md-12">
           <section className="panel">
@@ -49,37 +29,38 @@ const BookDetails = () => {
               <div className="col-md-6" style={{ marginRight: "50px" }}>
                 <div className="pro-img-details">
                   <img
-                  style={{height:"500px"}}
+                  style={{height:"500px", marginTop:"50px"}}
                     src={url}
                     alt={title}
                   />
                 </div>
               </div>
-              <div className="col-md-6" style={{ marginRight: "50px" }}>
+              <div className="col-md-6" style={{ marginRight: "50px", marginTop:"50px" }}>
                 <h2 className="mt-5">{title}</h2>
                 <p className="desc mt-4">{description}</p>
                 <hr />
-                <div className="Author mt-4">
+                <div className="Author mt-4" style={{fontSize:"17px"}}>
                   <span className="posted_in">
                     {" "}
                     <strong>Author : {author}</strong>
                   </span>
                 </div>
-                <div className="Quantity mt-2">
+                <div className="Quantity mt-2" style={{fontSize:"17px"}}>
                   <span className="posted_in">
                     {" "}
                     <strong>Quantity : {quantity}</strong>
                   </span>
                 </div>
-                <div className="Price mt-2">
+                <div className="Price mt-2" style={{fontSize:"17px"}}>
                   {" "}
                   <strong>Price : </strong>{" "}
                   <span className="pro-price"> ${price}</span>
                 </div>
                 <p>
                   <button
-                    className="btn btn-round btn-danger mt-5"
+                    className="btn btn-round btn-primary mt-5"
                     type="button"
+                    style={{fontSize:"15px"}}
                     onClick={() => {
                       addToCart({ ...book, id });
                       history.push("/cart");
@@ -88,6 +69,7 @@ const BookDetails = () => {
                     <FontAwesomeIcon
                       style={{ marginRight: "10px" }}
                       icon={faShoppingCart}
+                     
                     />
                     Add to Cart
                   </button>
